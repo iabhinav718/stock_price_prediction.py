@@ -1,8 +1,3 @@
-# -------------------------------------------------------------
-# STOCK PRICE PREDICTION USING MACHINE LEARNING
-# Baseline Model: Linear Regression + Tomorrow Forecast
-# -------------------------------------------------------------
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -56,9 +51,6 @@ def main():
     plt.ylabel("Price")
     plt.legend()
 
-    # -------------------------------------------------------------
-    # TOMORROW FORECAST (FIX APPLIED HERE)
-    # -------------------------------------------------------------
     scaler_full = StandardScaler()
     X_scaled_full = scaler_full.fit_transform(X)
 
@@ -66,8 +58,7 @@ def main():
     model_full.fit(X_scaled_full, y)
 
     last_scaled = scaler_full.transform([X.iloc[-1].values])
-    tomorrow_price = float(model_full.predict(last_scaled)[0])   # FIX: convert to float
-
+    tomorrow_price = float(model_full.predict(last_scaled)[0])
     last_actual = float(y.iloc[-1])
 
     print("------------------------------------------")
