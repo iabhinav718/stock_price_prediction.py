@@ -1,44 +1,28 @@
-Stock Price Prediction using Linear Regression
+Stock Price Prediction (Linear Regression)
 
-This project builds and evaluates a simple machine-learning model to predict stock closing prices using historical data and technical indicators.
-The script pulls market data from Yahoo Finance, trains a linear regression model, evaluates prediction quality on a test set, and forecasts the next day’s price.
+This project predicts daily stock closing prices using historical data from Yahoo Finance.
+A linear regression model is trained using basic technical indicators.
 
-Features
+Features Used
 
-The script computes several technical indicators used as model inputs:
+10-Day Moving Average (MA10)
 
-10-day moving average (MA10)
+30-Day Moving Average (MA30)
 
-30-day moving average (MA30)
-
-Volatility (10-day rolling standard deviation of returns)
+Volatility (10-day rolling standard deviation)
 
 Trading Volume
 
-The model is trained using:
+What the Script Does
 
-LinearRegression from scikit-learn
+Downloads price history for a user-entered ticker.
 
-Standardized features (StandardScaler)
+Builds features and splits data chronologically.
 
-Walk-forward chronological train/test split (no shuffling)
+Trains a linear regression model with standardized inputs.
 
-What the Program Does
+Evaluates predictions with MAE and RMSE.
 
-Downloads price data from Yahoo Finance for a user-entered ticker.
+Trains on all data and forecasts the next day’s closing price.
 
-Creates predictive features based on price and volume history.
-
-Splits data into train and test segments.
-
-Fits a regression model and predicts stock prices on unseen data.
-
-Prints model accuracy using:
-
-Mean Absolute Error (MAE)
-
-Root Mean Squared Error (RMSE)
-
-Trains on the full dataset and forecasts the next trading day’s closing price.
-
-Plots actual vs predicted prices and marks the forecasted point.
+Plots actual vs predicted prices and shows the forecast point
