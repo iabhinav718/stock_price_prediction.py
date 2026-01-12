@@ -3,7 +3,7 @@ Stock Price Prediction (Linear Regression)
 This project predicts daily stock closing prices using historical data from Yahoo Finance.
 A linear regression model is trained using basic technical indicators.
 
-Features Used
+Features Used      
 
 10-Day Moving Average (MA10)
 
