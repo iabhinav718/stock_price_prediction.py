@@ -4,7 +4,7 @@ This project predicts daily stock closing prices using historical data from Yaho
 A linear regression model is trained using basic technical indicators.
 
 Features Used      
-
+ 
 10-Day Moving Average (MA10)
 
 30-Day Moving Average (MA30)
